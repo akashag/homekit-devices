@@ -1,46 +1,41 @@
-# 🏠 HomeKit Devices Directory
+# Website
 
-This is a curated collection of Apple HomeKit-compatible (and Matter-ready) smart home devices — organized by category, with specifications, images, and affiliate links.  
-The project is built using [Docusaurus](https://docusaurus.io), enabling an easy-to-browse static website like [zigbee2mqtt.io](https://www.zigbee2mqtt.io).
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-## 🌐 Live Site
-
-> Coming soon at: [https://akashag.github.io/homekit-devices](https://akashag.github.io/homekit-devices)
-
----
-
-## 📂 Categories
-
-- 🔌 Smart Plugs
-- 💡 Lights & Bulbs
-- 🧱 Switches & Dimmers
-- 🔐 Locks & Doorbells
-- 📷 Cameras
-- 🌡️ Thermostats
-- 💧 Leak & Environmental Sensors
-- 📲 Remotes & Controllers
-- 🔗 Hubs & Bridges
-
-Each device page includes:
-- Feature highlights
-- HomeKit / Matter / Thread / Zigbee compatibility
-- Setup notes
-- Amazon or other affiliate purchase links
-
----
-
-## ⚙️ Tech Stack
-
-- [Docusaurus 2](https://docusaurus.io/)
-- React + Markdown (MDX)
-- GitHub Pages for free hosting
-
----
-
-## 🛠️ Getting Started Locally
+## Installation
 
 ```bash
-git clone https://github.com/akashag/homekit-devices.git
-cd homekit-devices
-npm install
-npm run start
+yarn
+```
+
+## Local Development
+
+```bash
+yarn start
+```
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+## Build
+
+```bash
+yarn build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+## Deployment
+
+Using SSH:
+
+```bash
+USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```bash
+GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
