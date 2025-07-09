@@ -1,42 +1,21 @@
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React from 'react';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import Link from '@docusaurus/Link';
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+    <Layout title="HomeKit Devices" description="Curated HomeKit device directory">
+      <main style={{padding: '2rem'}}>
+        <h1>Welcome to HomeKit Devices</h1>
+        <p>Your curated & categorized catalogue of Apple HomeKit-compatible smart devices—with specs, images, and affiliate links.</p>
+        <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
+          <Link className="button button--primary" to="/docs/lights/nanoleaf-essentials">
+            Browse Lights
+          </Link>
+          <Link className="button button--secondary" to="/docs/sensors/eve-motion">
+            Browse Sensors
+          </Link>
+        </div>
       </main>
     </Layout>
   );
